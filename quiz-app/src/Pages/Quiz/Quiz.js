@@ -18,7 +18,7 @@ const Quiz = ({ name, score, questions, setQuestions, setScore }) => {
           ...questions[currentQuestion]?.incorrect_answers,
         ])
     );
-  }, [questions]);
+  }, [questions,currentQuestion]);
 
   console.log(options);
 
@@ -45,7 +45,6 @@ const Quiz = ({ name, score, questions, setQuestions, setScore }) => {
             correct={questions[currentQuestion]?.correct_answer}
             score={score}
             setScore={setScore}
-            setQuestions={setQuestions}
           />
         </>
       ) : (
